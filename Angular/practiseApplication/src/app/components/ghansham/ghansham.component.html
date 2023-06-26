@@ -1,0 +1,14 @@
+<h3>hello from ghansham component</h3>
+
+<div class="container">
+
+      <!-- with different code we are doing same thing -->
+      <!-- doing event anf propety binding seperately  -->
+      <h1> two way data binding</h1>
+      Name:<input [value]="username" (input)="function2($event)"> <br>
+      you Entered:{{username}} <br> <br>
+
+      <!-- doing two way data binding at once  -->
+      Name:<input [(ngModel)]="name" > <br>
+      you Entered:{{name}}
+</div>

@@ -1,0 +1,108 @@
+<h1>Hello world</h1>
+
+<div class="container">
+
+  <table>
+    
+  <thead>
+    <th [colSpan]="colspan" style="text-align: center;">Student Details</th>
+    
+  </thead>
+  <tr class="data1">
+    <th>Name</th>
+    <th>Age</th>
+    <th [style]="vis">Branch</th>
+    <th [style]="vis">Contact</th>
+  </tr>
+  <tr class="data2">
+
+    <!-- here we are using string interpolation -->
+    <td >{{name}}</td>
+    <td>{{age}}</td>
+    <td [style]="vis">{{branch}}</td>
+    <td [style]="vis">{{mobile}}</td>
+    
+  </tr>
+  
+</table> <br> <br>
+  <button  class="btn btn-dark" (click)="func()">{{button}}</button>
+</div>
+  <br> <br>
+<div style="background: rgb(2,0,36);background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(41,41,103,1) 35%, rgba(0,212,255,1) 100%);width: 80%;color: azure;margin: auto;text-align: center;padding: 20px;">
+
+  <h1>Data binding in angular</h1>
+  <ul style="list-style: none;">
+    <li>
+      1) (property dinding) : we using square bracket and inside quotes we have to extract value from app.component.ts :
+      <p [innerHTML]="data"></p>
+    </li>
+    <li>
+      2) (string interpolation) : now lets pass the same data using string interpolation and string interpolation change data into string
+      (also keep in mind try not to use string interpolation and property binding altogether)
+      <p>{{data}}</p>
+
+    </li>
+    <li>
+      3) (event binding) : now lets trigger some event with the help of the events in  <br><br>
+      <button  class="btn btn-dark" (click)="func()">Button</button>
+    </li>
+
+    <li>
+      4) (class binding) : now lets see for the class binidng <br>
+      we have text in p
+      <p [class]="classes">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam optio doloribus aliquid esse iste, 
+        sed facere sint iusto alias est inventore nesciunt culpa fuga pariatur consequatur cum voluptate, sit quos.</p> <br>
+        we can also do it with lists 
+        
+        <!-- so only italicise will apply as passBooleanValue is false -->
+      <h1 class="italicise" [class.increasefont]="passBooleanValue">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil sed explicabo accusantium ipsam vero sint suscipit et 
+        est! Earum blanditiis cumque repudiandae quaerat voluptatibus nobis doloribus facere saepe consectetur obcaecati.</h1> <br> 
+
+      <!-- now lets use ngclass we can pas function -->
+      <h2 [ngClass]="addClass()">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo impedit mollitia id nisi animi magnam rerum
+         doloribus veritatis atque accusantium a at excepturi, odio, iste laboriosam, quaerat ab optio!
+      </h2>
+
+      another way to do it : 
+
+      <p [ngClass]="{'white':true,'redBackground':true}">dskhbg dkshbgdfsji sgdkjbsdfk sfkg,b sgkjfs s kjgfjsdk sdjgsdfhoj sd  ghisb gksfa gskhsbg </p>
+    </li>
+
+    <li>5) (using style binding) : we can done it with style and also [style] 
+
+      <h2 [ngStyle]="{'background-color':'red','color':'white'}">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat natus voluptatem non ducimus fugiat dolorem? Perferendis eligendi 
+        necessitatibus harum praesentium nostrum adipisci laborum quas modi maxime, minima, dignissimos eius odio.
+      </h2> <br>
+
+      you can also get the values using ng claass and function
+
+      <!-- <h2 [ngStyle]="getStyles()">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, ipsum! Labore esse suscipit dolorem illo. Dicta inventore velit hic nisi molestias dolores! Eveniet commodi praesentium officia ratione! Ducimus, dignissimos quod?
+      </h2> -->
+    </li>
+  </ul>
+
+
+</div>
+<!-- <app-ghansham >Hello i am ghansham</app-ghansham> -->
+
+<app-second></app-second>
+
+<!-- now we will learn about the data binidng take place inside the angular 
+
+  DATA binding
+
+    a) component to view
+      ->string interpolation
+      ->style binding
+      ->property binding
+      ->attribute binding
+  
+    b) view to component
+      ->event binding
+
+
+
+-->

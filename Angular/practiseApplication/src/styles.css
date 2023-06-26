@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+table,th,td{
+      border: 1px solid black;
+      padding: 10px;
+      background-color: antiquewhite;
+}
+
+body{
+      background-color: azure;
+}
+
+.italicise{
+      font-style: italic;
+}
+
+.incresefont{
+      font-size: large;
+}
+
+.redbackground{
+      background-color: red;
+}
+.white{
+      color: white;
+}
+table,th,td{
+      border: 1px solid black;
+      padding: 10px;
+      background-color: antiquewhite;
+}
